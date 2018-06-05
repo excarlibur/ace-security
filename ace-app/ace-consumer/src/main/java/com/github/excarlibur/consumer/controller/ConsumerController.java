@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by chenxuewei on 2018/5/28.
  */
 @RestController
-public class ConsumerController {
+public class ConsumerController{
 
 //  @Autowired
 //  LoadBalancerClient loadBalancerClient;
