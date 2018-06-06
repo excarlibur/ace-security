@@ -1,4 +1,4 @@
-package com.github.excarlibur.api;
+package com.github.excarlibur.api.feign;
 
 import org.springframework.web.bind.annotation.GetMapping;
 

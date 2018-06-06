@@ -1,4 +1,4 @@
-package com.github.excarlibur.dto;
+package com.github.excarlibur.api.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,12 +10,14 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class User {
+
 
   private String username;
 
   private Integer age;
+
 
 }

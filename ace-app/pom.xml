@@ -12,8 +12,8 @@
   <artifactId>ace-app</artifactId>
   <packaging>pom</packaging>
   <modules>
-    <module>ace-consumer</module>
     <module>ace-api</module>
+    <module>ace-consumer</module>
     <module>ace-provider</module>
   </modules>
 

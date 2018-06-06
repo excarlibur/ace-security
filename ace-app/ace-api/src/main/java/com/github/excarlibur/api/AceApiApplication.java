@@ -1,4 +1,4 @@
-package com.github.excarlibur;
+package com.github.excarlibur.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

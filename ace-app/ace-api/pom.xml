@@ -11,6 +11,8 @@
 
   <artifactId>ace-api</artifactId>
   <packaging>jar</packaging>
+  <name>ace-api</name>
+  <description>接口</description>
 
   <dependencies>
     <dependency>
