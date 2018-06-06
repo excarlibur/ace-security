@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @FeignClient("consul-provider")
 public interface ProviderClient {
 
-  @GetMapping("/dc")
+  @GetMapping("/consumer")
   String consumer();
 
 }
