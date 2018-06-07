@@ -43,6 +43,8 @@
    <module>ace-center</module>
     <module>ace-gate</module>
     <module>ace-app</module>
+    <module>config-server</module>
+    <module>hystrix-dashboard</module>
   </modules>
 
   <build>
