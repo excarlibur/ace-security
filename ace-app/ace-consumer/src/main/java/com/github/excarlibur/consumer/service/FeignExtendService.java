@@ -1,4 +1,4 @@
-package com.github.excarlibur.consumer.feign;
+package com.github.excarlibur.consumer.service;
 
 import com.github.excarlibur.api.feign.FeignService;
 import org.springframework.cloud.netflix.feign.FeignClient;

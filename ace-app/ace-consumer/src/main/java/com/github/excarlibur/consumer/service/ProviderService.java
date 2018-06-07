@@ -1,4 +1,4 @@
-package com.github.excarlibur.consumer.feign;
+package com.github.excarlibur.consumer.service;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
  * Created by chenxuewei on 2018/5/28.
  */
 @FeignClient("consul-provider")
-public interface ProviderClient {
+public interface ProviderService {
 
-  @GetMapping("/consumer")
-  String consumer();
+  @GetMapping("/hello")
+  String hello();
 
 }
