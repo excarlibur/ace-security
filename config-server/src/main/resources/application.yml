@@ -8,7 +8,7 @@ spring:
       server:
         git:
           uri: https://github.com/excarlibur/config
-          search-paths: ace-zuul
+          search-paths: '{application}'
 #          username:
 #          password:
 

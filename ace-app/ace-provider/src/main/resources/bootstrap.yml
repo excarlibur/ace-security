@@ -1,11 +1,7 @@
 spring:
-  application:
-    name: ace-zuul
   cloud:
     config:
       uri: http://localhost:1201/
       profile: dev
       label: master
 
-server:
-  port: 1101

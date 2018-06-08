@@ -3,6 +3,7 @@ package com.github.excarlibur.provider.controller;
 import com.github.excarlibur.api.dto.User;
 import com.github.excarlibur.api.feign.FeignService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,8 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping
 public class ProviderController implements FeignService {
 
+  @Value("${from}")
+  private String from;
+
   @Autowired
-  DiscoveryClient discoveryClient;
+  private DiscoveryClient discoveryClient;
 
   @GetMapping("/hello")
   public String hello() {
@@ -31,6 +35,11 @@ public class ProviderController implements FeignService {
     String services = discoveryClient.getLocalServiceInstance().getServiceId()+":hello";
     System.out.println(services);
     return services;
+  }
+
+  @GetMapping("/from")
+  public String from()  {
+    return from;
   }
 
   @Override
