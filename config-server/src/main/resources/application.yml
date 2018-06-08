@@ -1,0 +1,15 @@
+server:
+  port: 1201
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/excarlibur/config
+          search-paths: ace-zuul
+#          username:
+#          password:
+
+
