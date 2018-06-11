@@ -15,6 +15,7 @@
     <module>ace-api</module>
     <module>ace-consumer</module>
     <module>ace-provider</module>
+    <module>ace-ribbon-consumer</module>
   </modules>
 
 
