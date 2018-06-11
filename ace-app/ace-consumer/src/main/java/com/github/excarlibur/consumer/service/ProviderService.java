@@ -12,4 +12,7 @@ public interface ProviderService {
   @GetMapping("/hello")
   String hello();
 
+  @GetMapping("/hello_timeout")
+  String retryHello();
+
 }

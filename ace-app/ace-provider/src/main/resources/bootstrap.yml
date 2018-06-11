@@ -1,7 +1,9 @@
-spring:
-  cloud:
-    config:
-      uri: http://localhost:1201/
-      profile: dev
-      label: master
+#spring:
+#  cloud:
+#    config:
+#      uri: http://localhost:1201/
+#      profile: dev
+#      label: master
+#  application:
+#    name: consul-provider
 
