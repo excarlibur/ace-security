@@ -30,7 +30,7 @@ public class ProviderController implements FeignService {
   @GetMapping("/hello")
   public String hello() {
     String services = discoveryClient.getLocalServiceInstance().getServiceId()+":hello";
-    logger.info(services);
+    logger.info(services+"======<call consul-consumer>======");
     return services;
   }
 

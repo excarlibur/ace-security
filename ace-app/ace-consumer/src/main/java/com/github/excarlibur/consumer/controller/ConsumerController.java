@@ -3,6 +3,8 @@ package com.github.excarlibur.consumer.controller;
 import com.github.excarlibur.consumer.service.FeignExtendService;
 import com.github.excarlibur.consumer.service.HystrixService;
 import com.github.excarlibur.consumer.service.ProviderService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
@@ -31,6 +33,8 @@ public class ConsumerController {
   @Autowired
   FeignExtendService feignExtendService;
 
+  private final static Logger logger = LoggerFactory.getLogger(ConsumerController.class);
+
   //手动调用
   @GetMapping("/load_balance_client")
   public String loadBalancerClient() {
@@ -48,11 +52,11 @@ public class ConsumerController {
     return result;
   }
 
-  @GetMapping("/ribbon_retry")
-  public String ribbonRetry() {
-    String result =  restTemplate.getForObject("http://consul-provider/hello_timeout", String.class);
-    return result;
-  }
+//  @GetMapping("/ribbon_retry")
+//  public String ribbonRetry() {
+//    String result =  restTemplate.getForObject("http://consul-provider/hello_timeout", String.class);
+//    return result;
+//  }
   
   //Ribbon+Hystrix服务容错保护
   @GetMapping("/ribbon_hystrix_client")
@@ -63,6 +67,7 @@ public class ConsumerController {
   //用feign调用
   @GetMapping("/feign_client")
   public String feignClient() {
+    logger.info("======<call consul-consumer>======");
     return providerService.hello();
   }
 
@@ -71,7 +76,6 @@ public class ConsumerController {
     String result =  providerService.retryHello();
     return result;
   }
-
 
   //feign的继承特性
   @GetMapping("/feign_client_extend")
